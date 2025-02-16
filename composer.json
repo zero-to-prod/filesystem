@@ -1,14 +1,14 @@
 {
-  "name": "zero-to-prod/:slug",
-  "description": ":description",
+  "name": "zero-to-prod/filesystem",
+  "description": "Helpers for interacting with a filesystem.",
   "license": "MIT",
   "type": "library",
   "keywords": [
     "zero-to-prod",
-    ":slug"
+    "filesystem"
   ],
   "readme": "./README.md",
-  "time": ":time",
+  "time": "2025-02-16",
   "authors": [
     {
       "name": "David Smith",
@@ -17,13 +17,13 @@
       "role": "maintainer"
     }
   ],
-  "homepage": "https://github.com/zero-to-prod/:slug",
+  "homepage": "https://github.com/zero-to-prod/filesystem",
   "support": {
     "email": "dave0016@gmail.com",
-    "issues": "https://github.com/zero-to-prod/:slug/issues",
-    "source": "https://github.com/zero-to-prod/:slug",
-    "docs": "https://zero-to-prod.github.io/:slug/",
-    "security": "https://github.com/zero-to-prod/:slug/blob/main/SECURITY.md"
+    "issues": "https://github.com/zero-to-prod/filesystem/issues",
+    "source": "https://github.com/zero-to-prod/filesystem",
+    "docs": "https://zero-to-prod.github.io/filesystem/",
+    "security": "https://github.com/zero-to-prod/filesystem/blob/main/SECURITY.md"
   },
   "funding": [
     {
@@ -35,19 +35,17 @@
     "php": ">=7.1"
   },
   "require-dev": {
-    "phpunit/phpunit": "<12.0"
+    "phpunit/phpunit": "<12.0",
+    "mikey179/vfsstream": "^1.6"
   },
   "autoload": {
     "psr-4": {
-      "Zerotoprod\\:namespace\\": "src/"
+      "Zerotoprod\\Filesystem\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
       "Tests\\": "tests/"
     }
-  },
-  "bin": [
-    "bin/:slug"
-  ]
+  }
 }
