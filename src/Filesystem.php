@@ -17,9 +17,9 @@ class Filesystem
         );
 
         /** @var SplFileInfo $fileInfo */
-        foreach ($RecursiveIteratorIterator as $fileInfo) {
-            if (!$fileInfo->isDir() && $fileInfo->getExtension() === $extension) {
-                $files[$fileInfo->getFilename()] = $fileInfo;
+        foreach ($RecursiveIteratorIterator as $SplFileInfo) {
+            if (!$SplFileInfo->isDir() && $SplFileInfo->getExtension() === $extension) {
+                $files[$SplFileInfo->getFilename()] = $SplFileInfo;
             }
         }
 
@@ -30,10 +30,10 @@ class Filesystem
     {
         $files = [];
 
-        /** @var SplFileInfo $fileInfo */
-        foreach (new DirectoryIterator($directory) as $fileInfo) {
-            if (!$fileInfo->isDot() && !$fileInfo->isDir() && $fileInfo->getExtension() === $extension) {
-                $files[$fileInfo->getFilename()] = $fileInfo;
+        /** @var SplFileInfo $SplFileInfo */
+        foreach (new DirectoryIterator($directory) as $SplFileInfo) {
+            if (!$SplFileInfo->isDot() && !$SplFileInfo->isDir() && $SplFileInfo->getExtension() === $extension) {
+                $files[$SplFileInfo->getFilename()] = $SplFileInfo;
             }
         }
 
