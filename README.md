@@ -18,6 +18,8 @@
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
+    - [getFilesByExtension()](#getFilesByExtension)
+    - [getFilesByExtensionRecursive()](#getFilesByExtensionRecursive)
 - [Local Development](./LOCAL_DEVELOPMENT.md)
 - [Contributing](#contributing)
 
@@ -41,7 +43,25 @@ This will add the package to your project’s dependencies and create an autoloa
 
 ## Usage
 
+### getFilesByExtension()
 
+Return all files by extension in a directory.
+
+```php
+use Zerotoprod\Filesystem\Filesystem;
+
+$files = Filesystem::getFilesByExtension('dir', 'php')
+```
+
+### getFilesByExtensionRecursive()
+
+Return all files by extension in a directory recursively.
+
+```php
+use Zerotoprod\Filesystem\Filesystem;
+
+$files = Filesystem::getFilesByExtensionRecursive('dir', 'php')
+```
 
 ## Contributing
 
