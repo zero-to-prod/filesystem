@@ -7,9 +7,17 @@ use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
 use SplFileInfo;
 
+/**
+ * Helpers for interacting with a filesystem.
+ *
+ * @link https://github.com/zero-to-prod/filesystem
+ */
 class Filesystem
 {
 
+    /**
+     * @link https://github.com/zero-to-prod/filesystem
+     */
     public static function getFilesByExtension(string $directory, string $extension): array
     {
         $files = [];
@@ -24,6 +32,9 @@ class Filesystem
         return $files;
     }
 
+    /**
+     * @link https://github.com/zero-to-prod/filesystem
+     */
     public static function getFilesByExtensionRecursive(string $directory, string $extension): array
     {
         $files = [];
